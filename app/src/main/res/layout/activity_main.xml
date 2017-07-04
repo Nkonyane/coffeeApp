@@ -5,19 +5,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DEB887"
-    tools:context="com.example.wendy.coffeeapp.MainActivity">
+    android:background="@drawable/nene">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="133dp"
+            android:layout_height="match_parent"
+            android:layout_alignEnd="@+id/textView"
+            android:layout_alignRight="@+id/textView"
+            android:layout_below="@+id/textView2"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="21dp"
+            android:text="CUSTOMER NAME :"
+            android:textColor="#DEB887" />
+
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/capquantity"
-        android:layout_width="wrap_content"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_above="@+id/espressoquantity"
-        android:layout_toLeftOf="@+id/BTNTOTAL"
-        android:visibility="invisible"
+        android:visibility="visible"
+        android:layout_alignTop="@+id/textView6"
         android:layout_toStartOf="@+id/BTNTOTAL" />
 
     <EditText
@@ -25,59 +44,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
+        android:layout_alignBaseline="@+id/chkamericano"
         android:layout_alignBottom="@+id/chkamericano"
         android:layout_alignLeft="@+id/macchiatoquantity"
-        android:layout_alignStart="@+id/macchiatoquantity" />
+        android:layout_alignStart="@+id/macchiatoquantity"
+        android:layout_toLeftOf="@+id/BTNTOTAL"
+        android:layout_toStartOf="@+id/BTNTOTAL" />
 
     <EditText
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
         android:id="@+id/espressoquantity"
         android:visibility="invisible"
-        android:layout_alignBottom="@+id/totalespresso"
+        android:layout_alignBottom="@+id/txtespressoprice"
         android:layout_alignLeft="@+id/capquantity"
-        android:layout_alignStart="@+id/capquantity" />
+        android:layout_alignStart="@+id/capquantity"
+        android:layout_toLeftOf="@+id/BTNTOTAL"
+        android:layout_toStartOf="@+id/BTNTOTAL" />
 
     <EditText
         android:id="@+id/macchiatoquantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
+        android:layout_alignBaseline="@+id/chkmacchiato"
+        android:layout_alignBottom="@+id/chkmacchiato"
+        android:layout_alignRight="@+id/espressoquantity"
+        android:layout_alignEnd="@+id/espressoquantity"
         android:layout_alignLeft="@+id/espressoquantity"
-        android:layout_alignStart="@+id/espressoquantity"
-        android:layout_below="@+id/txtespressoprice" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:src="@drawable/images_12"
-        android:scaleType="centerCrop"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/imageView" />
+        android:layout_alignStart="@+id/espressoquantity" />
 
     <CheckBox
         android:id="@+id/chkcappuccino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CAPPUCCINO"
-        android:layout_marginLeft="7dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/imageView"
+
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/linearLayout"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp" />
 
     <CheckBox
         android:id="@+id/chkespresso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ESPRESSO"
-        android:layout_below="@+id/chkcappuccino"
-        android:layout_alignLeft="@+id/chkcappuccino"
-        android:layout_alignStart="@+id/chkcappuccino"
-        android:layout_marginTop="24dp" />
+        android:layout_below="@+id/spinner6"
+        android:layout_alignLeft="@+id/spinner6"
+        android:layout_alignStart="@+id/spinner6"
+        android:layout_marginTop="28dp"
+        android:layout_alignRight="@+id/spinner6"
+        android:layout_alignEnd="@+id/spinner6" />
 
     <CheckBox
         android:id="@+id/chkmacchiato"
@@ -85,16 +105,17 @@
         android:layout_height="wrap_content"
         android:text="MACCHIATO"
 
-        android:layout_above="@+id/americanoquantity"
-        android:layout_alignLeft="@+id/chkespresso"
-        android:layout_alignStart="@+id/chkespresso" />
+        android:layout_alignBottom="@+id/spinner4"
+        android:layout_alignStart="@+id/spinner4"
+        android:layout_marginBottom="30dp"
+        android:layout_toStartOf="@+id/txtmacchiatiprice" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
         android:text="WENDY'S COFFEE APP"
+        android:textColor="#DEB887"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
@@ -105,9 +126,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AMERICANO"
-        android:layout_above="@+id/btncalculate"
-        android:layout_alignRight="@+id/chkmacchiato"
-        android:layout_alignEnd="@+id/chkmacchiato" />
+        android:layout_above="@+id/spinner3"
+        android:layout_alignStart="@+id/spinner4"
+        android:layout_toStartOf="@+id/txtamericanoprice" />
 
     <Button
         android:id="@+id/btncalculate"
@@ -115,31 +136,32 @@
         android:layout_height="wrap_content"
         android:text="AMOUNT DUE"
         android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBaseline="@+id/txttotal"
+        android:layout_alignBottom="@+id/txttotal"
+        android:layout_alignRight="@+id/chkcappuccino"
+        android:layout_alignEnd="@+id/chkcappuccino" />
 
     <TextView
         android:id="@+id/txtcappuccinoprice"
+        android:textColor="#F5F5DC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
 
 
         android:text="R46.00"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_alignBaseline="@+id/chkcappuccino"
         android:layout_alignBottom="@+id/chkcappuccino"
-        android:layout_toRightOf="@+id/chkcappuccino"
-        android:layout_toEndOf="@+id/chkcappuccino" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/chkcappuccino" />
 
     <TextView
         android:id="@+id/txtespressoprice"
+        android:textColor="#F5F5DC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="R60.00"
+        android:layout_alignBottom="@+id/chkespresso"
         android:layout_alignLeft="@+id/txtcappuccinoprice"
         android:layout_alignStart="@+id/txtcappuccinoprice"
         android:layout_alignTop="@+id/totalespresso" />
@@ -147,20 +169,23 @@
     <TextView
         android:id="@+id/txtmacchiatiprice"
         android:layout_width="wrap_content"
+        android:textColor="#F5F5DC"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="R53.00"
-        android:layout_alignTop="@+id/chkmacchiato"
         android:layout_alignLeft="@+id/txtespressoprice"
-        android:layout_alignStart="@+id/txtespressoprice" />
+        android:layout_alignStart="@+id/txtespressoprice"
+        android:layout_alignBottom="@+id/chkmacchiato"
+        android:layout_alignTop="@+id/chkmacchiato" />
 
     <TextView
         android:id="@+id/txtamericanoprice"
+        android:textColor="#F5F5DC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:text="R62.00"
-        android:layout_alignBottom="@+id/chkamericano"
+        android:layout_alignTop="@+id/chkamericano"
         android:layout_alignLeft="@+id/txtmacchiatiprice"
         android:layout_alignStart="@+id/txtmacchiatiprice" />
 
@@ -171,11 +196,10 @@
         android:text="0"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textStyle="bold"
-        android:layout_alignBaseline="@+id/btncalculate"
-        android:layout_alignBottom="@+id/btncalculate"
-        android:layout_toRightOf="@+id/chkcappuccino"
-        android:layout_alignRight="@+id/txtamericanoprice"
-        android:layout_alignEnd="@+id/txtamericanoprice" />
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/americanoquantity"
+        android:layout_alignStart="@+id/americanoquantity" />
 
 
 
@@ -184,6 +208,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
+        android:textColor="#F5F5DC"
         android:layout_below="@+id/txtcappuccinoprice"
         android:layout_toRightOf="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
@@ -195,6 +220,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
+        android:textColor="#F5F5DC"
         android:layout_alignBaseline="@+id/chkespresso"
         android:layout_alignBottom="@+id/chkespresso"
         android:layout_alignLeft="@+id/totalmacchiato"
@@ -205,6 +231,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
+        android:textColor="#F5F5DC"
         android:layout_alignBaseline="@+id/txtmacchiatiprice"
         android:layout_alignBottom="@+id/txtmacchiatiprice"
         android:layout_alignLeft="@+id/totalcappuccino"
@@ -214,6 +241,7 @@
         android:id="@+id/totalamericano"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#F5F5DC"
         android:layout_alignBaseline="@+id/txtamericanoprice"
         android:layout_alignBottom="@+id/txtamericanoprice"
         android:layout_alignLeft="@+id/totalmacchiato"
@@ -224,17 +252,73 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/capquantity"
-        android:layout_toEndOf="@+id/capquantity"
-        android:layout_toRightOf="@+id/capquantity"
-        android:text="TextView" />
+        android:text="PRICE"
+        android:textColor="#DEB887"
+        android:layout_alignTop="@+id/chkcappuccino"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
 
     <Button
         android:id="@+id/BTNTOTAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TOTAL"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignBaseline="@+id/txttotal"
+        android:layout_alignBottom="@+id/txttotal"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/txtcappuccinoprice"
+        android:layout_alignStart="@+id/txtcappuccinoprice"
+        android:layout_marginTop="12dp" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:entries="@array/cappuccino_topping"
+        android:layout_above="@+id/btncalculate"
+        android:layout_alignStart="@+id/chkamericano"
+        android:layout_toStartOf="@+id/txtamericanoprice" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/expresso_topping"
+        android:layout_above="@+id/americanoquantity"
+        android:layout_alignStart="@+id/btncalculate"
+        android:layout_marginBottom="18dp"
+        android:layout_toStartOf="@+id/txtamericanoprice" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/macchiato_topping"
+        android:layout_above="@+id/chkmacchiato"
+        android:layout_alignStart="@+id/chkmacchiato"
+        android:layout_marginBottom="11dp"
+        android:layout_toStartOf="@+id/txtmacchiatiprice" />
+
+    <Spinner
+        android:id="@+id/spinner6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/capquantity"
+        android:layout_alignLeft="@+id/chkcappuccino"
+        android:layout_alignStart="@+id/chkcappuccino"
+        android:entries="@array/americano_topping"
+        android:layout_toLeftOf="@+id/txtcappuccinoprice"
+        android:layout_toStartOf="@+id/txtcappuccinoprice" />
+
+
 </RelativeLayout>

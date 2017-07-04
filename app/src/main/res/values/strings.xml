@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">coffeeApp</string>
+    <string-array name="cappuccino_topping">
+        <item>CHOCOLATE</item>
+        <item>CINNAMON</item>
+        <item>MINT</item>
+
+
+    </string-array>
+    <string-array name="expresso_topping">
+        <item>CHOCOLATE</item>
+        <item>CINNAMON</item>
+        <item>MINT</item>
+    </string-array>
+
+    <string-array name="macchiato_topping">
+        <item>CHOCOLATE</item>
+        <item>CINNAMON</item>
+        <item>MINT</item>
+    </string-array>
+
+    <string-array name="americano_topping">
+        <item>CHOCOLATE</item>
+        <item>CINNAMON</item>
+        <item>MINT</item>
+    </string-array>
+
+    <string-array name="cappucino_topping">
+        <item>CHOCOLATE</item>
+        <item>CINNAMON</item>
+        <item>MINT</item>
+    </string-array>
 </resources>
